@@ -16,4 +16,18 @@ window.addEventListener('load', function () {
         }
         loadDoc(username, message);
     });
+    var get = document.getElementById('new');
+    get.addEventListener('click', function () {
+        function getMessage() {
+            var request = new XMLHttpRequest();
+            request.open('GET', 'http://chat.queencityiron.com/messages');
+            request.onload = function () {
+                console.log(request.responseText);
+                var data = JSON.parse(request.responseText);
+                console.log(data.length);
+            };
+            request.send();
+        }
+        getMessage();
+    });
 }); // End of window.addEventListener
