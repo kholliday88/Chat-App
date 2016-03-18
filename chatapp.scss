@@ -1,1 +1,11 @@
-
+@import "bourbon/bourbon";
+@import "neat/neat";
+body {
+    background-color: darkslateblue;
+}
+#chat {
+    color: white;
+}
+button {
+    @include button;
+}

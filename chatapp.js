@@ -22,12 +22,15 @@ window.addEventListener('load', function () {
             var request = new XMLHttpRequest();
             request.open('GET', 'http://chat.queencityiron.com/messages');
             request.onload = function () {
-                console.log(request.responseText);
                 var data = JSON.parse(request.responseText);
-                console.log(data.length);
+                for (var i = 0; i < data.length; i++) {
+                    console.log(data[i].user, data[i].message);
+                }
             };
             request.send();
         }
+        console.log('HEY');
+        //Pull what you want, and produce that - username and message, and time stamp.
         getMessage();
-    });
-}); // End of window.addEventListener
+    }); // End of window.addEventListener
+});
