@@ -1,10 +1,22 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
+html {
+    font-family: $georgia;
+}
 body {
-    background-color: darkslateblue;
+    @include outer-container;
+    background-color: dodgerblue;
+    ;
 }
 #chat {
+    @include span-columns(6);
+    @include shift(3);
+    background-color: darkslateblue;
     color: white;
+    border-radius: 3px;
+    h1 {
+        font-size: 50px;
+    }
 }
 button {
     @include button;

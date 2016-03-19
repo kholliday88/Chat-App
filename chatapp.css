@@ -4,11 +4,32 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+html {
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif; }
+
 body {
-  background-color: darkslateblue; }
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: dodgerblue; }
+  body::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 #chat {
-  color: white; }
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-left: 25.58941%;
+  background-color: darkslateblue;
+  color: white;
+  border-radius: 3px; }
+  #chat:last-child {
+    margin-right: 0; }
+  #chat h1 {
+    font-size: 50px; }
 
 button {
   border: 1px solid #076fe4;
