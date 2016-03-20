@@ -21,6 +21,7 @@ window.addEventListener('load', function() {
     function getMessage() {
       var request = new XMLHttpRequest();
       request.open('GET', 'http://chat.queencityiron.com/messages');
+      document.getElementById('display-messages').innerHTML = '';
       request.onload = function() {
         var data = JSON.parse(request.responseText);
         for (var i = 0; i < data.length; i++) {
